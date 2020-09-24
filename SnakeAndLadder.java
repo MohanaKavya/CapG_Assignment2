@@ -14,13 +14,16 @@ public class SnakeAndLadder {
 		// Initialized User Starting Position
 		int user_position = 0;
 		
+		// While Loop for Continuous Die Rolling till Player reaches Winning Position 
+		while(user_position < 100) {
+
 		// Roll the Dice to get Number from 1 to 6
-		int roll_dice_value = (int)(Math.random()*6+1);
+		int roll_dice_value = (int)(Math.random()*6+1); 
 		
 		//Check for Options 1-No Play, 2-Ladder, 3-Snake
-		int option = (int)(Math.random()*3+1);
+		int option = (int)(Math.random()*3+1); 
 		
-		//Switch Case to Change Player Position Based on Option 
+		//Switch Case to Change Player Position Based on Option
 		switch(option)
 		{
 			case LADDER : user_position += roll_dice_value;
@@ -31,7 +34,10 @@ public class SnakeAndLadder {
 				      else user_position = 0;
 				      break;
 		}
-
+		}
+		// Display of Game Result
+		System.out.println("Player Won : Reached Winning Position");
+		
 	}
 
 }
