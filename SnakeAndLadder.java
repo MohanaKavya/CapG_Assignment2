@@ -23,10 +23,11 @@ public class SnakeAndLadder {
 		//Check for Options 1-No Play, 2-Ladder, 3-Snake
 		int option = (int)(Math.random()*3+1); 
 		
-		//Switch Case to Change Player Position Based on Option
+		//Switch Case to Change Player Position Based on Option 
 		switch(option)
 		{
-			case LADDER : user_position += roll_dice_value;
+			case LADDER : if(user_position + roll_dice_value <= 100) 	// if condition added to get Exact Winning Position
+				      user_position += roll_dice_value;
 				      break;
 			
 			case SNAKE  : if(user_position >= roll_dice_value)
@@ -36,7 +37,7 @@ public class SnakeAndLadder {
 		}
 		}
 		// Display of Game Result
-		System.out.println("Player Won : Reached Winning Position");
+		System.out.println("Player Won : Reached to Exact Winning Position - 100");
 		
 	}
 
