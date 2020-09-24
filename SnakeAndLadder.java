@@ -7,6 +7,9 @@ public class SnakeAndLadder {
 		// variables
 		// Initialized User Starting Position
 		int user_position = 0;
+		
+		// Roll the Dice to get Number from 1 to 6
+		int roll_dice_value = (int)(Math.random()*6+1);
 	}
 
 }
