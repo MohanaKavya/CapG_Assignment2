@@ -11,14 +11,17 @@ public class SnakeAndLadder {
 	public static void main(String[] args) {
 		
 		// variables
-		// Initialized User Starting Position
-		int user_position = 0;
+		int user_position = 0;				// Initialized User Starting Position
+		int no_of_times_die_rolled = 0;
+		
+		System.out.println("Roll Count\tPlayer Position");
 		
 		// While Loop for Continuous Die Rolling till Player reaches Winning Position 
 		while(user_position < 100) {
 
 		// Roll the Dice to get Number from 1 to 6
 		int roll_dice_value = (int)(Math.random()*6+1); 
+		no_of_times_die_rolled++;
 		
 		//Check for Options 1-No Play, 2-Ladder, 3-Snake
 		int option = (int)(Math.random()*3+1); 
@@ -35,9 +38,12 @@ public class SnakeAndLadder {
 				      else user_position = 0;
 				      break;
 		}
+		
+		System.out.println(no_of_times_die_rolled+"\t\t"+user_position);
+		
 		}
-		// Display of Game Result
-		System.out.println("Player Won : Reached to Exact Winning Position - 100");
+		// Display of Number of Times Die is Rolled till Player Wins
+		System.out.println("Number of Times Die is Rolled till Player Wins : "+no_of_times_die_rolled);
 		
 	}
 
